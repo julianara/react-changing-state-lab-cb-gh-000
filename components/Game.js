@@ -35,12 +35,22 @@ export default class Game extends React.Component {
   
   getWinner () {
     const results = solutions.map(
+<<<<<<< HEAD
       (solution) => solution.map((i) => this.state.board[i]).join('')
     );
     const row = results.find(
       (result) => result === 'XXX' || result === 'OOO'
     );
     return row && row[0];
+=======
+      (solution) => solution.map((i) => this.state.board([i]).join(''))
+      );
+      
+      const row = results.find(
+        (result) => result==="XXX" || result="OOO"
+      );
+      return row && row[0];
+>>>>>>> 6df819be32e83b88d20eb8b93bd7ba7179fcadd1
   }
 
   isComplete () {
